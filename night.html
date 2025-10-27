@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to the Night Page 🌙</title>
+  <title>Welcome to the Night Page 🌙 </title>
 
   <style>
     /* General page style */
@@ -55,7 +55,7 @@
       box-shadow: 0 10px 16px rgba(0, 0, 0, 0.12);
     }
 
-    /* Cute tape effect */
+    /* Cute tape effect on top of cards */
     .choice-box::before {
       content: "";
       width: 60px;
@@ -90,6 +90,31 @@
       transform: scale(1.3);
       accent-color: #ff85a1;
     }
+
+    /* Special "Back to main" card */
+    .center-box {
+      grid-column: span 2;
+      background: #fff0f6;
+    }
+
+    /* Back button style */
+    .back-btn {
+      background: #ff85a1;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .back-btn:hover {
+      background: #e05b82;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -101,27 +126,27 @@
     <div class="choice-box">    
       <img src="https://i.pinimg.com/736x/40/cb/be/40cbbe60dbfcfb8698b5a13622eadaf6.jpg" alt="night">
       <h4>Candlelit dinner</h4>
-      <input type="radio" name="activity" value="one-day-escapade">
+      <input type="radio" name="activity" value="one day escape">
     </div>
 
     <div class="choice-box">    
       <img src="https://i.pinimg.com/1200x/94/16/aa/9416aa1b1f437bfedab07f4ce6c11f80.jpg" alt="night">
-      <h4>Game night</h4>
+      <h4>game night</h4>
       <input type="radio" name="activity" value="game-night">
     </div>
 
     <div class="choice-box">    
       <img src="https://i.pinimg.com/1200x/2a/46/4d/2a464d440cf3209a53636304c011410b.jpg" alt="night">
-      <h4>Build a fort + movie night</h4>
+      <h4>build a fort + movie night</h4>
+      </h4>
       <input type="radio" name="activity" value="movie-night">
     </div>
 
     <div class="choice-box">    
       <img src="https://i.pinimg.com/736x/38/ee/06/38ee0678be7657879eec727f07d82e6a.jpg" alt="night">
-      <h4>Stargazing + night out</h4>
+      <h4>stargazing + night out</h4>
       <input type="radio" name="activity" value="stargazing">
     </div>
-  </div>
 
 <a href="index.html">
   <button style="background:#6a9ef2; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">
@@ -131,9 +156,5 @@
 
 </body>
 </html>
-
-
-
-
 
 
