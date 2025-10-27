@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <a href="page2.html">Go to Page 2</a>
-    <a href="page.html">Go to Page</a>
-    <a href="page4.html">Go to Page 4</a>
-    <a href="page5.html">Go to Page 5</a>
-    <a href="page6.html">Go to Page 6</a>
-    
     <meta charset="UTF-8">
     <title>Happy Birthday 💕</title>
     <style>
@@ -43,18 +37,17 @@
         }
     </style>
 </head>
-<body>
-    <h1>Hello my stinky rat 💖</h1>
-    <p>Let's plan a date for your special day 🎉</p>
-    <p>Thank you for being born and being an amazing boyfriend and an annoying rat, my handsome rat king! heheh. Let's plan an amazing activity for your one and only day!! ༘⋆🌷🫧💭₊˚ෆ</p>
 
-    <!-- Date picker -->
+<body>
+    <h1>Hello my stinky rat💖</h1>
+    <p>Let's plan a date for your special day 🎉</p>
+    <p>Thank you for being born and being an amazing boyfriend and an annoying rat my handsome rat king! heheh. Let's plan an amazing activity for your one and only day!! ༘⋆🌷🫧💭₊˚ෆ</p>
+
     <label for="date">Choose a date:</label>
-    <input type="date" id="date" name="date">
+    <input type="date" id="date">
     <button onclick="showDate()">Confirm Date</button>
     <p id="dateMessage" style="color: green; font-weight: bold;"></p>
 
-    <!-- Cards -->
     <div class="card">
         <h2>Afternoon</h2>
         <p>Just You, Me & the Afternoon Breeze 🍃💕</p>
@@ -74,20 +67,17 @@
     </div>
 
     <div class="card">
-        <h2>A Short Message</h2>
+        <h2>A short message</h2>
         <p>A short message for my stinky rat</p>
         <a href="message.html"><button>Choose This</button></a>
     </div>
 
     <div class="card">
-        <h2>How Well You Know Me??</h2>
-        <p>Let’s see how much you can get right… and you might even get a small gift, hehe 🎁😊</p>
+        <h2>How well you know me??</h2>
+        <p>Let’s see how much you can get right… 🎁😊</p>
         <a href="quiz.html"><button>Choose This</button></a>
     </div>
 
-    <p id="message" style="font-size: 1.2rem; color: green; margin-top: 2rem;"></p>
-
-    <!-- Scripts -->
     <script>
         function showDate() {
             const selectedDate = document.getElementById('date').value;
@@ -97,12 +87,11 @@
                 document.getElementById('dateMessage').innerText = 'Please pick a date first 😊';
             }
         }
-
-        function choose(option) {
-            document.getElementById('message').innerText = `Yay! I’ll get everything ready for "${option}" 💕`;
-        }
     </script>
+
 </body>
 </html>
+
+
 
 
