@@ -37,77 +37,64 @@
         }
     </style>
 </head>
-</html>
-
-  <label for="date">Choose a date:</label>
-  <input type="date" id="date" name="date">
-
-  <button onclick="showDate()">Confirm Date</button>
-
-  <p id="dateMessage" style="color: green; font-weight: bold;"></p>
-
-  <script>
-    function showDate() {
-      const selectedDate = document.getElementById('date').value;
-      if (selectedDate) {
-        document.getElementById('dateMessage').innerText = `Great! You picked ${selectedDate} 💖`;
-      } else {
-        document.getElementById('dateMessage').innerText = 'Please pick a date first 😊';
-      }
-                                                                                              
-  
-<script>
 <body>
-    <h1>Hello my stinky rat💖</h1>
-    <p>Let's plan a date for your speical day 🎉</p>
-    <p>Thank you for being born and being an amazing boyfriend and an annoying rat my handsome rat king! heheh. Let's plan an amazing activity for your one and only day!! ༘⋆🌷🫧💭₊˚ෆ</p>
+    <h1>Hello my stinky rat 💖</h1>
+    <p>Let's plan a date for your special day 🎉</p>
+    <p>Thank you for being born and being an amazing boyfriend and an annoying rat, my handsome rat king! heheh. Let's plan an amazing activity for your one and only day!! ༘⋆🌷🫧💭₊˚ෆ</p>
 
-<div class="card">
-  <h2>Afternoon</h2>
-  <p>Just You, Me & the Afternoon Breeze 🍃💕</p>
-  <a href="afternoon.html">
-    <button>Choose This</button>
-  </a>
-</div>
+    <!-- Date picker -->
+    <label for="date">Choose a date:</label>
+    <input type="date" id="date" name="date">
+    <button onclick="showDate()">Confirm Date</button>
+    <p id="dateMessage" style="color: green; font-weight: bold;"></p>
 
-<div class="card">
-    <h2>night</h2>
-    <p>Just Us & the Night Sky 🌃💕</p>
-    <a href="night.html">
-    <button>choose this</button>
-    </a>
-</div>
+    <!-- Cards -->
+    <div class="card">
+        <h2>Afternoon</h2>
+        <p>Just You, Me & the Afternoon Breeze 🍃💕</p>
+        <a href="afternoon.html"><button>Choose This</button></a>
+    </div>
 
-<div class="card">
-    <h2>restaurant</h2>
-    <p>Table for Happiness 🥂❤️</p>
-    <a href="restaurant.html">
-    <button>choose this</button>
-    </a>
-</div>
+    <div class="card">
+        <h2>Night</h2>
+        <p>Just Us & the Night Sky 🌃💕</p>
+        <a href="night.html"><button>Choose This</button></a>
+    </div>
 
-<div class="card">
-    <h2>A short message</h2>
-    <p>A short message for my stinky rat</p>
-    <a href="message.html">
-    <button>choose This</button>
-    </a>
-</div>
+    <div class="card">
+        <h2>Restaurant</h2>
+        <p>Table for Happiness 🥂❤️</p>
+        <a href="restaurant.html"><button>Choose This</button></a>
+    </div>
 
-<div class="card">
-  <h2>How well you know me??</h2>
-  <p>Let’s see how much you can get right… and you might even get a small gift, hehe." 🎁😊</p>
-  <a href="quiz.html">
-    <button>choose This</button>
-  </a>
-</div>
+    <div class="card">
+        <h2>A Short Message</h2>
+        <p>A short message for my stinky rat</p>
+        <a href="message.html"><button>Choose This</button></a>
+    </div>
 
- <p id="message" style="font-size: 1.2rem; color: green; margin-top: 2rem;"></p>
+    <div class="card">
+        <h2>How Well You Know Me??</h2>
+        <p>Let’s see how much you can get right… and you might even get a small gift, hehe 🎁😊</p>
+        <a href="quiz.html"><button>Choose This</button></a>
+    </div>
 
-  <script>
-    function choose(option) {
-      document.getElementById('message').innerText = `Yay! I’ll get everything ready for "${option}" 💕`;
-    }
-  </script>
+    <p id="message" style="font-size: 1.2rem; color: green; margin-top: 2rem;"></p>
 
+    <!-- Scripts -->
+    <script>
+        function showDate() {
+            const selectedDate = document.getElementById('date').value;
+            if (selectedDate) {
+                document.getElementById('dateMessage').innerText = `Great! You picked ${selectedDate} 💖`;
+            } else {
+                document.getElementById('dateMessage').innerText = 'Please pick a date first 😊';
+            }
+        }
+
+        function choose(option) {
+            document.getElementById('message').innerText = `Yay! I’ll get everything ready for "${option}" 💕`;
+        }
+    </script>
 </body>
+</html>
