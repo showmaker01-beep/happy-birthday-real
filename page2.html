@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🍓 Cozy Afternoon Moments 🐻</title>
+
+  <style>
+    /* General page style */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0eaf9, #f8f0f9);
+      color: #444;
+      text-align: center;
+      padding: 2rem;
+      margin: 0;
+      background-attachment: fixed;
+    }
+
+    /* Cute title */
+    h1 {
+      color: #ff6f91;
+      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.4);
+    }
+
+    p {
+      margin-bottom: 2rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Choice grid layout */
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Polaroid-style cards */
+    .choice-box {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 1.2rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 3px solid #b0d4eb;
+      position: relative;
+    }
+
+    .choice-box:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Cute tape effect on top of cards */
+    .choice-box::before {
+      content: "";
+      width: 60px;
+      height: 18px;
+      background: #d6e9ff;
+      border-radius: 5px;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .choice-box img {
+      width: 100%;
+      max-width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 0.8rem;
+    }
+
+    .choice-box h4 {
+      margin: 0.5rem 0;
+      color: #ff6f91;
+      font-size: 1.1rem;
+    }
+
+    /* Cute radios */
+    input[type="radio"] {
+      margin-top: 0.5rem;
+      transform: scale(1.3);
+      accent-color: #ff85a1;
+    }
+
+    /* Special "Back to main" card */
+    .center-box {
+      grid-column: span 2;
+      background: #fff0f6;
+    }
+
+    /* Back button style */
+    .back-btn {
+      background: #ff85a1;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .back-btn:hover {
+      background: #e05b82;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍓 Cozy Afternoon Moments 🐻</h1>
+  <p>pick your cozy vibe for today… ✨☕</p>
+
+  <div class="choices">
+    <div class="choice-box">    
+      <img src="https://i.pinimg.com/736x/56/35/3c/56353c09ee15bcf61bbdfd81f03f0525.jpg" alt="cozy">
+      <h4>One day escape</h4>
+      <input type="radio" name="activity" value="one day escape">
+    </div>
+
+    <div class="choice-box">    
+      <img src="https://i.pinimg.com/736x/74/cb/58/74cb58b5dac6975782e502fe9a3a52de.jpg" alt="cozy">
+      <h4>Museum</h4>
+      <input type="radio" name="activity" value="Museum">
+    </div>
+
+    <div class="choice-box">    
+      <img src="https://i.pinimg.com/736x/71/0e/db/710edb5b52f234876703cbb0ce4a9594.jpg" alt="cozy">
+      <h4>Escape room</h4>
+      <input type="radio" name="activity" value="escape-room">
+    </div>
+
+    <div class="choice-box">    
+      <img src="https://i.pinimg.com/736x/41/7c/09/417c09648679b64f9d554d066b7d0a8c.jpg" alt="cozy">
+      <h4>Indoor mini-golf, bowling or arcade</h4>
+      <input type="radio" name="activity" value="indoor-games">
+    </div>
+
+    <!-- Center box -->
+    <div class="choice-box center-box">
+      <img src="https://i.pinimg.com/1200x/f0/a5/16/f0a51636559d215181dd0646cb8df115.jpg" alt="back">
+      <h4>Back to main screen 💕</h4>
+      <button class="back-btn" onclick="window.location.href='homepage.html'">Back</button>
+      <input type="radio" name="activity" value="main-screen">
+    </div>
+  </div>
+
+</body>
+</html>
+

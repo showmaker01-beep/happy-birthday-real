@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How Well Do You Know Me? 🐻💕</title>
+  <style>
+    body{
+        font-family:'Segoe UI', sans-serif;
+        background: #d8dfed;
+        color: #333;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    h1 {
+      color: #69a8ff;
+      font-size: 2.5em;
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.4em;
+      color: #e75480;
+    }
+
+    .heart {
+      font-size: 2em;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>How Well Do You Know Me? 🥰</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      1. Who said “I love you” first? 💬❤️
+      <label><input type="radio" name="q1" value="0"> Me 👧</label>
+      <label><input type="radio" name="q1" value="1"> You 👦</label>
+    </div>
+
+    <div class="question">
+      2. What’s my go-to comfort food? 🍜?
+      <label><input type="radio" name="q2" value="1"> ramen 🍜😘</label>
+      <label><input type="radio" name="q2" value="0"> chicken 🍗</label>
+      <label><input type="radio" name="q2" value="0"> both 😋</label>
+    </div>
+
+    <div class="question">
+      3. When is our anniversary?
+      <label><input type="radio" name="q3" value="0"> Feb 14 💝</label>
+      <label><input type="radio" name="q3" value="1"> Feb 16 🌸</label>
+      <label><input type="radio" name="q3" value="0"> FEB 18 🎄</label>
+    </div>
+
+    <div class="question">
+      4. What’s my dream vacation with you?
+      <label><input type="radio" name="q4" value="0"> Japan ⛩️</label>
+      <label><input type="radio" name="q4" value="1"> Greenland 🌳</label>
+      <label><input type="radio" name="q4" value="0"> Canada ☃️</label>
+    </div>
+
+    <div class="question">
+      5. If we could live anywhere together, I’d pick…
+      <label><input type="radio" name="q5" value="0"> A cozy city apartment 🏙️ </label>
+      <label><input type="radio" name="q5" value="0"> A cute cottage in the countryside 🏡 </label>
+      <label><input type="radio" name="q5" value="0">  A beach house 🏖️</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit Quiz 💌</button>
+  </form>
+
+  <div id="result"></div>
+    <!-- Center box -->
+    <div class="choice-box center-box">
+      <button class="back-btn" onclick="window.location.href='homepage.html'">Back</button>
+      <input type="radio" name="activity" value="main-screen">
+    </div>
+  </div>
+
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const totalQuestions = 3;
+
+      for (let i = 1; i <= totalQuestions; i++) {
+        const answer = document.querySelector('input[name="q' + i + '"]:checked');
+        if (answer && answer.value === "1") {
+          score++;
+        }
+      }
+
+      const result = document.getElementById("result");
+      if (score === 3) {
+        result.innerHTML = `<div class="heart">❤️</div><p>You know me so well! You're the best boyfriend ever 💘</p>`;
+      } else if (score === 2) {
+        result.innerHTML = `So close! You got ${score}/3 🥰 Let's try again later!`;
+      } else {
+        result.innerHTML = `You got ${score}/3 🤭... Are you sure you're my boyfriend? Just kidding! 😜`;
+      }
+    }
+  </script>
+</body>
+</html>
